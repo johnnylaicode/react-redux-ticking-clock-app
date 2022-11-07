@@ -1,6 +1,6 @@
 // Initial (starting) state
 export const initialState = {
-  newTime: new Date().toLocaleTimeString()
+  time: new Date().toLocaleTimeString()
 };
   
 // The clock reducer starts with the initial state, and then returns the next (new) state.
@@ -8,8 +8,8 @@ export const initialState = {
 export const clockReducer = (state = initialState, action) => {
   switch (action.type) {
     case "FETCH_NEW_TIME":
-        return {
-        newTime: action.payload  // Return new state data/property "newTime"
+      return {
+        time: action.payload  // Return new state data/property "newTime"
       };
     default:
       return state;

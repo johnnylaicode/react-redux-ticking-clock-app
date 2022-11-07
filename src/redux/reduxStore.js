@@ -1,7 +1,7 @@
 import { createStore } from "redux";
 import { clockReducer, initialState } from "./reducers";
 
-// Configure redux store.
+// Configure Redux store.
 export const reduxStore = () => {
   // Syntax: createStore(reducer, [preloadedState], [enhancer])
   const store = createStore(

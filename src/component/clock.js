@@ -5,12 +5,12 @@ import { fetchNewTimeAction } from "../redux/actions";
 // Expose state data in Redux store to React component.
 const mapState = state => {
     return {
-    newTime: state.newTime
+    newTime: state.time  // State data for time
   };
 };
-// Expose dispatched reducer in Redux store to React component.
+// Expose action in Redux store to React component.
 const mapDispatch = dispatch => ({
-  updateTime: () => dispatch(fetchNewTimeAction())  // Dispatch action to update time
+  updateTime: () => dispatch(fetchNewTimeAction())  // Dispatch action to get new time
 });
 
 // React class component "Clock"
@@ -19,7 +19,7 @@ class Clock extends React.Component {
   componentDidMount() {
     // Dispatch action to update time every 1 second 
     this.timerID = setInterval(
-      () => this.props.updateTime(),  // Dispatched action to update time
+      () => this.props.updateTime(),  // Action to update time
       1000
     );  
   }
