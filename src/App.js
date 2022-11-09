@@ -1,7 +1,7 @@
 import React from "react";
 import { Provider } from "react-redux";
 import './App.css';
-import Clock from "./component/clock.js";
+import Clock from "./component/clock";
 import reduxStore from "./redux/reduxStore";
 
 function App() {
