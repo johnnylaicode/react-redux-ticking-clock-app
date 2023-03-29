@@ -9,7 +9,7 @@ export const clockReducer = (state = initialState, action) => {
   switch (action.type) {
     case "FETCH_NEW_TIME":
       return {
-        time: action.payload  // Return new state data/property "newTime"
+        time: action.payload  // Return new state (based on "newTime" in mapState)
       };
     default:
       return state;

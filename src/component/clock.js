@@ -2,15 +2,15 @@ import React from "react";
 import { connect } from "react-redux";
 import { fetchNewTimeAction } from "../redux/actions";
 
-// Expose state data in Redux store to React component.
+// Set up associated state in Redux.
 const mapState = state => {
     return {
     newTime: state.time  // State data for time
   };
 };
-// Expose action in Redux store to React component.
+// Set up associated action in Redux (using "dispatch" method).
 const mapDispatch = dispatch => ({
-  updateTime: () => dispatch(fetchNewTimeAction())  // Dispatch action to get new time
+  updateTime: () => dispatch(fetchNewTimeAction())  // Dispatch "updateTime" action to update time
 });
 
 // React class component "Clock"
@@ -19,7 +19,7 @@ class Clock extends React.Component {
   componentDidMount() {
     // Dispatch action to update time every 1 second 
     this.timerID = setInterval(
-      () => this.props.updateTime(),  // Action to update time
+      () => this.props.updateTime(),  // Dispatch "updateTime" action to update time
       1000
     );  
   }
@@ -41,5 +41,6 @@ class Clock extends React.Component {
   }
 }
 
-// Connect (register) <Clock/> component to Redux store, specifying state data and reducer to be used.
+// Connect (register) component to Redux, specifying state data and reducer to be used.
+// Syntax: connect([mapState], [mapDispatch])(component);
 export default connect(mapState, mapDispatch)(Clock);

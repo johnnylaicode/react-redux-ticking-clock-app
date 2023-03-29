@@ -1,12 +1,12 @@
 import { createStore } from "redux";
-import { clockReducer, initialState } from "./reducers";
+import { clockReducer } from "./reducers";
 
 // Configure Redux store.
 export const reduxStore = () => {
-  // Syntax: createStore(reducer, [preloadedState], [enhancer])
+  // Syntax: createStore(reducer, [preloadedState])
   const store = createStore(
     clockReducer,  // reducer
-    initialState   // preloaded initial state
+    {time: ''}  // Set default state "time"
   );
 
   return store;

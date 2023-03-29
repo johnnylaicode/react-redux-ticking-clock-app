@@ -1,4 +1,4 @@
-// ACTION TYPE:
+// ACTION TYPE: Action for Fetching New Time
 export const FETCH_NEW_TIME = "FETCH_NEW_TIME";
 
 // ACTION CREATOR: Return an Action object
