@@ -1,3 +1,6 @@
+/*==================================================
+/src/redux/actions.js
+==================================================*/
 // ACTION TYPE: Action for Fetching New Time
 export const FETCH_NEW_TIME = "FETCH_NEW_TIME";
 

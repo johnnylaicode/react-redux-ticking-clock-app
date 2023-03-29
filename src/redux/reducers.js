@@ -1,3 +1,6 @@
+/*==================================================
+/src/redux/reducers.js
+==================================================*/
 // Initial (starting) state
 export const initialState = {
   time: new Date().toLocaleTimeString()

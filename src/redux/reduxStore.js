@@ -1,3 +1,6 @@
+/*==================================================
+/src/redux/reduxStore.js
+==================================================*/
 import { createStore } from "redux";
 import { clockReducer } from "./reducers";
 
