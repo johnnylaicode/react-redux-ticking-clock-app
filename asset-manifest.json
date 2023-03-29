@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-redux-ticking-clock-app/static/css/main.abd64e84.css",
-    "main.js": "/react-redux-ticking-clock-app/static/js/main.3deb3a4d.js",
+    "main.js": "/react-redux-ticking-clock-app/static/js/main.ac51f868.js",
     "index.html": "/react-redux-ticking-clock-app/index.html",
     "main.abd64e84.css.map": "/react-redux-ticking-clock-app/static/css/main.abd64e84.css.map",
-    "main.3deb3a4d.js.map": "/react-redux-ticking-clock-app/static/js/main.3deb3a4d.js.map"
+    "main.ac51f868.js.map": "/react-redux-ticking-clock-app/static/js/main.ac51f868.js.map"
   },
   "entrypoints": [
     "static/css/main.abd64e84.css",
-    "static/js/main.3deb3a4d.js"
+    "static/js/main.ac51f868.js"
   ]
 }
