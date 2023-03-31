@@ -5,13 +5,13 @@ import React from "react";
 import { connect } from "react-redux";
 import { fetchNewTimeAction } from "../redux/actions";
 
-// Set up associated state in Redux.
+// Set up component's associated state in Redux.
 const mapState = state => {
     return {
-    newTime: state.time  // State data for time
+    newTime: state.time  // State for time
   };
 };
-// Set up associated action in Redux (using "dispatch" method).
+// Set up component's associated action in Redux (using "dispatch" method).
 const mapDispatch = dispatch => ({
   updateTime: () => dispatch(fetchNewTimeAction())  // Dispatch "updateTime" action to update time
 });
@@ -32,7 +32,7 @@ class Clock extends React.Component {
     clearInterval(this.timerID);
   }
 
-  // Return component to be rendered. 
+  // Return component to be rendered (using component's associated state "newTime" in Redux). 
   render() {  
     return (
       <div>
@@ -44,6 +44,6 @@ class Clock extends React.Component {
   }
 }
 
-// Connect (register) component to Redux, specifying state data and reducer to be used.
+// Connect (register) component to Redux, specifying state and action to be used.
 // Syntax: connect([mapState], [mapDispatch])(component);
 export default connect(mapState, mapDispatch)(Clock);
